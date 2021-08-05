@@ -2,6 +2,7 @@ package com.toby.example.demo;
 
 import com.toby.example.demo.dao.DaoFactory;
 import com.toby.example.demo.dao.UserDao;
+import org.apache.catalina.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -23,7 +24,6 @@ public class UserDaoTest {
 
         //ApplicationContext의 getBean()이라는 메소드를 이용해 UserDao의 오브젝트를 가져올 수 있다.
         UserDao dao = context.getBean("userDao",UserDao.class);
-
 
 
 
