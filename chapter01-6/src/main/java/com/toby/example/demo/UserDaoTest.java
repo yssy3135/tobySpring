@@ -25,7 +25,24 @@ public class UserDaoTest {
         //ApplicationContext의 getBean()이라는 메소드를 이용해 UserDao의 오브젝트를 가져올 수 있다.
         UserDao dao = context.getBean("userDao",UserDao.class);
 
+        /**
+         * 팩토리를 사용해서 오브젝트 생성 (서로 다른 오브젝트)
+         */
+        DaoFactory factory = new DaoFactory();
+        UserDao dao1 = factory.userDao();
+        UserDao dao2 = factory.userDao();
 
+        System.out.println(dao1);
+        System.out.println(dao2);
+
+        /**
+         * getBean을 통해 호출 (동일한 오브젝트)
+         */
+
+        UserDao dao3 = context.getBean("userDao",UserDao.class);
+        UserDao dao4 = context.getBean("userDao",UserDao.class);
+        System.out.println(dao3);
+        System.out.println(dao4);
 
 
 
