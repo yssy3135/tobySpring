@@ -68,5 +68,7 @@ project(":chapter02-1") {
 }
 project(":chapter02-2") {
 }
+project(":chapter02-3") {
+}
 
 
